@@ -12,40 +12,77 @@
   <url>https://github.com/cern/narlibs-gtest</url>
 
   <developers>
-    <developer>
-      <name>Brice Copy</name>
-      <email>brice.copy@cern.ch</email>
-      <organization>CERN</organization>
-      <organizationUrl>http://cern.ch</organizationUrl>
-    </developer>
+      <developer>
+        <name>Brice Copy</name>
+        <email>brice.copy@cern.ch</email>
+        <organization>CERN</organization>
+        <organizationUrl>http://cern.ch</organizationUrl>
+      </developer>
   </developers>
   
   <licenses>
-      <license>
-        <name>GNU GENERAL PUBLIC LICENSE, Version 3</name>
-        <url>https://raw.githubusercontent.com/CERN/narlibs-gtest/master/LICENSE</url>
-      </license>
+    <license>
+      <name>GNU GENERAL PUBLIC LICENSE, Version 3</name>
+      <url>https://raw.githubusercontent.com/CERN/narlibs-gtest/master/LICENSE</url>
+    </license>
   </licenses>
   
   <scm>
-      <connection>scm:git:git://github.com/cern/narlibs-gtest.git</connection>
-      <developerConnection>scm:git:ssh://github.com:cern/narlibs-gtest.git</developerConnection>
-      <url>http://github.com/cern/narlibs-gtest/tree/master</url>
-</scm>
-
+    <connection>scm:git:git://github.com/cern/narlibs-gtest.git</connection>
+    <developerConnection>scm:git:ssh://github.com:cern/narlibs-gtest.git</developerConnection>
+    <url>http://github.com/cern/narlibs-gtest/tree/master</url>
+  </scm>
+  
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+  
   <build>
     <plugins>
       <plugin>
-        <groupId>com.github.maven-nar</groupId>
-        <artifactId>nar-maven-plugin</artifactId>
-        <version>3.2.3</version>
-        <extensions>true</extensions>
-        <configuration>
-            <libraries>
-            <library><type>shared</type></library>
-            <library><type>static</type></library>
-            </libraries>
-        </configuration>
+          <groupId>com.github.maven-nar</groupId>
+          <artifactId>nar-maven-plugin</artifactId>
+          <version>3.2.3</version>
+          <extensions>true</extensions>
+          <configuration>
+              <libraries>
+              <library><type>shared</type></library>
+              <library><type>static</type></library>
+              </libraries>
+          </configuration>
+      </plugin>
+      
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>1.5</version>
+          <executions>
+            <execution>
+              <id>sign-artifacts</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+            </execution>
+          </executions>
+      </plugin>
+      <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <version>1.6.7</version>
+          <extensions>true</extensions>
+          <configuration>
+             <serverId>ossrh</serverId>
+             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+             <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          </configuration>
       </plugin>
     </plugins>
   </build>
