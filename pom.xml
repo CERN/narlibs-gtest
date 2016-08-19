@@ -9,6 +9,29 @@
   <version>1.7.0</version>
 
   <description>Google Test NAR packaging</description>
+  <url>https://github.com/cern/narlibs-gtest</url>
+
+  <developers>
+    <developer>
+      <name>Brice Copy</name>
+      <email>brice.copy@cern.ch</email>
+      <organization>CERN</organization>
+      <organizationUrl>http://cern.ch</organizationUrl>
+    </developer>
+  </developers>
+  
+  <licenses>
+      <license>
+        <name>GNU GENERAL PUBLIC LICENSE, Version 3</name>
+        <url>https://raw.githubusercontent.com/CERN/narlibs-gtest/master/LICENSE</url>
+      </license>
+  </licenses>
+  
+  <scm>
+      <connection>scm:git:git://github.com/cern/narlibs-gtest.git</connection>
+      <developerConnection>scm:git:ssh://github.com:cern/narlibs-gtest.git</developerConnection>
+      <url>http://github.com/cern/narlibs-gtest/tree/master</url>
+</scm>
 
   <build>
     <plugins>
