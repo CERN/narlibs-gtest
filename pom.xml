@@ -43,7 +43,7 @@
           <extensions>true</extensions>
           
           <configuration>
-              <libsName>gtest,gtests_main</libsName>
+              <libsName>gtest,gtest_main</libsName>
               <libraries>
               <library><type>shared</type></library>
               <library><type>static</type></library>
