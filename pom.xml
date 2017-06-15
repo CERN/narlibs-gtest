@@ -5,7 +5,7 @@
   <groupId>com.github.cern.narlibs</groupId>
   <artifactId>gtest</artifactId>
   <packaging>nar</packaging>
-  <version>1.7.0.1-SNAPSHOT</version>
+  <version>1.7.0.1</version>
 
   <description>Google Test NAR packaging</description>
   <url>https://github.com/cern/narlibs-gtest</url>
@@ -30,7 +30,7 @@
     <connection>scm:git:git://github.com/cern/narlibs-gtest.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/cern/narlibs-gtest.git</developerConnection>
     <url>https://github.com/cern/narlibs-gtest/tree/master</url>
-    <tag>gtest-1.7.0</tag>
+    <tag>gtest-1.7.0.1</tag>
   </scm>
   
   
