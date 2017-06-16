@@ -57,6 +57,20 @@
   
   <profiles>
     <profile>
+      <id>cern</id>
+      <distributionManagement>
+        <repository>
+          <id>releases</id>
+          <name>CERN Repository</name>
+          <url>https://repository.cern.ch/nexus/content/repositories/enice-releases/</url>
+        </repository>
+        <snapshotRepository>
+          <id>snapshots</id>
+          <name>CERN Snapshot Repository</name>
+          <url>https://repository.cern.ch/nexus/content/repositories/enice-snapshots/</url>
+        </snapshotRepository>
+    </profile>
+    <profile>
       <id>ossrh</id>
       <distributionManagement>
         <snapshotRepository>
