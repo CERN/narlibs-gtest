@@ -69,6 +69,7 @@
           <name>CERN Snapshot Repository</name>
           <url>https://repository.cern.ch/nexus/content/repositories/enice-snapshots/</url>
         </snapshotRepository>
+      </distributionManagement>
     </profile>
     <profile>
       <id>ossrh</id>
